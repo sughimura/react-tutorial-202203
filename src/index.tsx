@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+type SquaresType = (string | null)[];
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
@@ -10,7 +11,7 @@ function Square(props) {
   );
 }
 
-const calculateWinner = (squares) => {
+const calculateWinner = (squares: SquaresType) => {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
