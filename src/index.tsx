@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 type SquaresType = (string | null)[];
-function Square(props) {
+interface SquaresProps {
+  value: string | null;
+  onClick: () => void;
+}
+const Square: React.VFC<SquaresProps> = (props) => {
   return (
     <button className="square" onClick={props.onClick}>
       {props.value}
